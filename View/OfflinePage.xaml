@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module02Exercise01.View.OfflinePage"
+             Title="Offline Page">
+    <VerticalStackLayout 
+        VerticalOptions="CenterAndExpand" 
+        HorizontalOptions="Center">
+
+        <Image Source="https://cdn-icons-png.flaticon.com/128/17356/17356430.png" 
+               HeightRequest="100" 
+               WidthRequest="100" />
+
+        <Label Text="Connect to the internet"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="Medium"
+               Padding="18"/>
+        
+        <Label Text="You're offline. Check your connection."
+               HorizontalOptions="Center"/>
+
+        <Button Text="Retry"
+                CornerRadius="20"
+                Clicked="OnRetryClicked"
+                BackgroundColor="Maroon"
+                WidthRequest="200"
+                Margin="20"/>
+
+        <Button Text="Close App" 
+                CornerRadius="20"
+                Clicked="OnCloseAppClicked" 
+                BackgroundColor="Maroon"
+                WidthRequest="200"
+                Margin="-10"/>
+    </VerticalStackLayout>
+
+</ContentPage>

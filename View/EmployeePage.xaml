@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module02Exercise01.View.EmployeePage"
+             Title="Employee Page">
+    
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+        <Label 
+            Text="{Binding FullName}"
+            FontSize="20"
+            FontAttributes="Bold"
+            Margin="5,10,0,-10"/>
+        
+        <!--Button bound to LoadEmployeeDataCommand-->
+        <Button Text="Load Manager Data"
+                Command="{Binding LoadEmployeeDataCommand}"
+                BackgroundColor="Maroon"/>
+
+        <Label 
+            Text="List of Employees"
+            FontSize="18"
+            FontAttributes="Bold"
+            Margin="5,5,0,-15"/>
+        <ListView ItemsSource="{Binding Employees}"
+                  Margin="5,10,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding FullName}"
+                              Detail="{Binding EmployeeDetails}"
+                              />
+                   
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Add Employee"
+                Clicked="OnAddEmployeeClicked"
+                BackgroundColor="Maroon"/>
+    </VerticalStackLayout>
+</ContentPage>

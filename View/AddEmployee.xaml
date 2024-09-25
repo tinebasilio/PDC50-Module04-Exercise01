@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module02Exercise01.View.AddEmployee"
+             Title="Add New Employee">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,30"
+            Spacing="25">
+
+            <Label Text="Personal Info"
+                   FontSize="16"
+                   FontAttributes="Bold"/>
+
+            <Entry Placeholder="First Name"/>
+
+            <Entry Placeholder="Last Name"/>
+
+            <Entry Placeholder="Full Name"/>
+
+            <Entry x:Name="MunicipalityEntry" 
+                   Placeholder="Municipality"/>
+
+            <Entry x:Name="ProvinceEntry" 
+                   Placeholder="Province"/>
+
+            <Label x:Name="CoordinatesLabel"
+                   Text="Coordinates will appear here"
+                   Margin="5,5,0,0"/>
+            
+            <Button Text="Get Location"
+                    Clicked="OnGetLocationClicked"
+                    BackgroundColor="White"
+                    TextColor="Maroon" 
+                    BorderColor="Maroon" 
+                    BorderWidth="1.5"/>
+
+            <Entry Placeholder="Position"/>
+
+            <Entry Placeholder="Department"/>
+
+            <Label Text="Photo"
+                   FontSize="16"
+                   FontAttributes="Bold"/>
+
+            <Image x:Name="CaptureImage"
+                   HeightRequest="300"
+                   WidthRequest="300"
+                   Aspect="AspectFill"
+                   Source="https://static.vecteezy.com/system/resources/previews/009/292/244/original/default-avatar-icon-of-social-media-user-vector.jpg"/>
+
+            <Button Text="Take Employee Photo"
+                    Clicked="OnTakePhotoClicked"
+                    BackgroundColor="White"
+                    TextColor="Maroon" 
+                    BorderColor="Maroon" 
+                    BorderWidth="1.5"/>
+            
+            <Button Text="Save"
+                    BackgroundColor="Maroon"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
